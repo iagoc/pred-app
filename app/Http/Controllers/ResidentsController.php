@@ -22,7 +22,7 @@ class ResidentsController extends Controller
 
     public function store(Request $request) 
     { 
-//utilizado para retornar um valor ao front
+        
         
     }
 

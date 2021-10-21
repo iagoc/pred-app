@@ -10,10 +10,10 @@ function boraLa() {
     const url = '/resident/dados';
     const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-    let selectAdrress = document.getElementById("info-address");
+    let selectAdrress = document.getElementById("building_adrress");
     let optionsAdrress = selectAdrress.options[selectAdrress.selectedIndex];
 
-    let selectLocalAdrress = document.getElementById("info-address-local");
+    let selectLocalAdrress = document.getElementById("info_address_local");
 
 
     fetch(url, { //https://5balloons.info/example-of-vanilla-javascript-fetch-post-api-in-laravel/

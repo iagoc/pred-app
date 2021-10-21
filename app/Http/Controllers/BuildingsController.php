@@ -24,11 +24,7 @@ class BuildingsController extends Controller
         $building = new Building();
 
         Log::info('Teste: ' . json_encode($request->toArray()));
-        // $address = $request->address;
-        // $address_kitnet = $request->address_kitnet;
-        // $address_house = $request->address_house;
-        // $address_store = $request->address_store;
-
+        
         $building->address = request('address');
         $building->address_kitnet = request('address_kitnet');
         $building->address_house = request('address_house');

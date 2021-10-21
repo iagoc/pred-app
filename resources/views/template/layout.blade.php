@@ -9,13 +9,22 @@
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 </head>
 <body class="bg-gray-50">
-<nav>
-    <div class="flex justify-between bg-white shadow-sm">
-        <div class="flex flex-wrap flex-col self-center p-5">
-            {{-- <hr class="w-36 bg-gray-900 h-0.5"> --}}
+<nav class="bg-white w-full shadow-sm">
+    <div class="grid grid-cols-4">      
+        <div class="p-3">
             <h1 class="text-4xl font-medium text-gray-700">Pred.App</h1>
-            {{-- <hr class="w-40 bg-gray-900 h-0.5 mt-1"> --}}
         </div>
+        <ul class="col-span-2 flex justify-center items-center">
+            <li class="text-lg mx-6">Inicio</li>
+            <li class="text-lg mx-6 ">Prédios</li>
+            <li class="text-lg mx-6">Moradores</li>
+            <li class="text-lg mx-6 ">Relatórios</li>
+        </ul>
+    </div>   
+
+
+
+
         <div class="md:hidden flex items-center pr-3">
             <button class="outline-none mobile-menu-button">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -46,7 +55,6 @@ style=" fill:#000000;"><path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L
                 {{-- <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-gray-700 hover:text-white font-semibold transition duration-300">Contact Us</a></li> --}}
             </ul>
         </div>
-    
 
 
     <script>
@@ -57,18 +65,11 @@ style=" fill:#000000;"><path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L
             menu.classList.toggle("hidden");
         });
     </script>
-    {{-- <div class="">
-        <div class="flex items-center flex-wrap">
-            <a href="">Inicio</a>
-            <a href="">Predios</a>
-            <a href="">Moradores</a>
-        </div>
-    </div>     --}}
 </nav>
 
-<div class="flex justify-center pt-6">
+{{-- <div class="flex justify-center pt-6">
     @yield('img-id')
-</div>
+</div> --}}
 
 <section class="max-w-4xl mx-auto my-auto">
     @yield('content')
