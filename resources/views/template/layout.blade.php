@@ -9,16 +9,17 @@
     <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 </head>
 <body class="bg-gray-50">
-<nav class="bg-white w-full shadow-sm">
+<nav class="bg-blueMenu text-white w-full shadow-sm">
     <div class="grid grid-cols-4">      
-        <div class="p-3">
-            <h1 class="text-4xl font-medium text-gray-700">Pred.App</h1>
+        <div class="p-2">
+            <h1 class="text-4xl font-medium">Pred.App</h1>
         </div>
-        <ul class="col-span-2 flex justify-center items-center">
-            <li class="text-lg mx-6">Inicio</li>
-            <li class="text-lg mx-6 ">Prédios</li>
-            <li class="text-lg mx-6">Moradores</li>
-            <li class="text-lg mx-6 ">Relatórios</li>
+        <ul class="col-span-2 flex text-grayBack justify-center items-center">
+            <li class="text-lg mx-6 font-medium hover:text-white hover:"><a href="/">Inicio</a>
+            </li>
+            <li class="text-lg mx-6 font-medium hover:text-white"><a href="/building">Prédios</a></li>
+            <li class="text-lg mx-6 font-medium hover:text-white"><a href="/resident">Moradores</a></li>
+            <li class="text-lg mx-6 font-medium hover:text-white"><a href="/">Relatórios</a></li>
         </ul>
     </div>   
 
