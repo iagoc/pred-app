@@ -16,9 +16,9 @@ class CreateBuildingsTable extends Migration
         Schema::create('buildings', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('address');
-            $table->integer('address_kitnet');
-            $table->integer('address_house');
-            $table->integer('address_store');
+            $table->integer('address_kitnet')->nullable();
+            $table->integer('address_house')->nullable();
+            $table->integer('address_store')->nullable();
 
             $table->engine = 'InnoDB';
         });

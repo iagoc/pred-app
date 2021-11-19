@@ -3,12 +3,12 @@
 @section('titulo')
     Cadastrar Predio
 @endsection
-
+{{-- 
 @section('img-id')
     <img src="{{ asset('img/building.png') }}" />
-@endsection
+@endsection --}}
 
-@section('content')
+{{-- @section('content') --}}
 
 @section('content')
 <section class="flex flex-col items-center">

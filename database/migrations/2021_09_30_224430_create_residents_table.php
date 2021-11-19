@@ -16,9 +16,10 @@ class CreateResidentsTable extends Migration
         Schema::create('residents', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->string('name');
-            $table->integer('apart_number');
             $table->string('phone');
-            $table->integer('ligth_number');
+            $table->string('info_address_local');
+            $table->string('apart_number');
+            $table->string('light_number');
             $table->float('rent_price');
             $table->date('due_date');
             $table->integer('building_id')->unsigned();;

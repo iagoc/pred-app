@@ -22,10 +22,6 @@
             <li class="text-lg mx-6 font-medium hover:text-white"><a href="/">Relatórios</a></li>
         </ul>
     </div>   
-
-
-
-
         <div class="md:hidden flex items-center pr-3">
             <button class="outline-none mobile-menu-button">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"

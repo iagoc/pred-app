@@ -13,7 +13,7 @@
     <form method="POST" name="resident-registration" id="resident-registration" class="bg-white shadow-md rounded-lg mt-6 p-6 h-auto w-11/12">
         @csrf
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <fieldset name="info-resident" class="flex flex-wrap -mx-3">
+        <fieldset name="info_resident" class="flex flex-wrap -mx-3">
             <p class="w-full px-3">
                 <label class="uppercase tracking-wide text-gray-700 text-xs font-bold mb-1" for="grid-last-name">Nome</label>
                 <input required  type="text" name="resident_name" id="resident_name" placeholder="Digite o nome" class="w-full self-start appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">      
@@ -26,7 +26,7 @@
 
             <p class="w-2/3 px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-4  mb-1" for="grid-last-name">Endereço do Prédio</label>
-                <select name="building_adrress" id="building_adrress" onchange="boraLa()" class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <select name="building_adrress" id="building_adrress" onchange="getLocalAdrress()" class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                     <option value="">Selecione</option>
                     @foreach ($buildings as $building)
                         <option value="{{ $building->id }}">{{ $building->address }}</option>
@@ -42,7 +42,7 @@
                 </select>            
             </p>
         </fieldset>
-        <fieldset  name="info-building" class="flex flex-wrap justify-center -mx-3">
+        <fieldset  name="info_building" class="flex flex-wrap justify-center -mx-3">
             <p class="w-1/2 px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-4  mb-1" for="grid-last-name">Número Apart.</label>
                 <input  type="number" name="apart_number" id="apart_number" placeholder="99999-9999" class="block w-full appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
@@ -50,12 +50,12 @@
             </p>
             <p class="w-1/2">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-4  mb-1" for="grid-last-name">Número do relógio</label>
-                <input  type="tel" name="apart_light" id="apart_light" placeholder="99999-9999" class="block w-full appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <input  type="tel" name="light_number" id="light_number" placeholder="99999-9999" class="block w-full appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
             </p>
 
             <p class="w-1/2 px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-4  mb-1" for="grid-last-name">Valor do aluguel</label>
-                <input  type="number" name="hent_price" id="hent_price" placeholder="R$ 600,00" class="block w-full appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <input  type="number" name="rent_price" id="rent_price" placeholder="R$ 600,00" class="block w-full appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
             </p>
             <p class="w-1/2">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mt-4  mb-1" for="grid-last-name">Data de Vencimento</label>

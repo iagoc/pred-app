@@ -23,18 +23,17 @@ use App\Http\Controllers\ResidentsController;
 //     return view('building.index');
 // });
 
-Route::get('/resident', function(){
-    return view('resident.index');
-});
+// Route::get('/resident', function(){
+//     return view('resident.index');
+// });
 
-Route::get('/resident/create', 'App\Http\Controllers\ResidentsController@create');
+// Route::get('/resident/create', 'App\Http\Controllers\ResidentsController@create');
 
 Route::get('/resident', [ResidentsController::class, 'index'])->name('resident-list');
 Route::get('/resident/create', [ResidentsController::class, 'create']);
 Route::post('/resident/create', [ResidentsController::class, 'store']);
 
 Route::post('/resident/dados', [ResidentsController::class, 'dados']);
-
 
 Route::get('/building', [BuildingsController::class, 'index'])->name('building-list');
 Route::get('/building/create', [BuildingsController::class, 'create']);

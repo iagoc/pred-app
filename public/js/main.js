@@ -1,4 +1,3 @@
-
 function removeOptions(selectElement) {
     var i, L = selectElement.options.length - 1;
     for (i = L; i >= 0; i--) {
@@ -6,13 +5,12 @@ function removeOptions(selectElement) {
     }
 }
 
-function boraLa() {
+function getLocalAdrress() {
     const url = '/resident/dados';
     const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
     let selectAdrress = document.getElementById("building_adrress");
     let optionsAdrress = selectAdrress.options[selectAdrress.selectedIndex];
-
     let selectLocalAdrress = document.getElementById("info_address_local");
 
 
